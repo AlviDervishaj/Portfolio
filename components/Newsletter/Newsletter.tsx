@@ -31,7 +31,7 @@ export const Newsletter: NextPage = () => {
     <section className="h-auto pt-12 pb-4 container mx-auto relative">
       <div className="w-11/12 md:w-3/5 lg:w-2/5 h-auto mx-auto pb-8" id="info">
         <h2 className="text-2xl font-wotfard font-bold">A front-end web development newsletter !</h2>
-        <p className="text-lg">I'll let you know when I make a new exciting project and share exclusive content now and then.</p>
+        <p className="text-lg">I&apos;ll let you know when I make a new exciting project and share exclusive content now and then.</p>
         <small className="text-base text-sky-700 font-medium">No spam, unsubscribe at any time.</small>
       </div>
       <form className="w-full h-auto pt-2 pb-8 flex flex-col md:flex-row justify-evenly items-center content-center gap-4">

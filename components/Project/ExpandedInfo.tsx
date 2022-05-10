@@ -67,16 +67,16 @@ export const ExpandedInfo: NextPage<ExpandedInfoProps> = ({ title, description, 
         <section className="flex flex-row md:justify-end justify-start items-center content-center gap-4 md:gap-6">
           <Link href={repo} passHref>
             <a className={"w-github h-github"} target={"_blank"} rel="noreferrer">
-              <Image src={"/static/images/github.png"} className={"object-contain !w-github !h-github !pt-8 md:!pt-4"} width={64} height={64} />
+              <Image src={"/static/images/github.png"} alt="Github" className={"object-contain !w-github !h-github !pt-8 md:!pt-4"} width={64} height={64} />
             </a>
           </Link>
           <Link href={source} passHref>
             <a className={"w-github h-github"} target={"_blank"} rel="noreferrer">
-              <Image src={"/static/images/search.png"} className={"object-contain !w-github !h-github !pt-8 md:!pt-4"} width={64} height={64} />
+              <Image src={"/static/images/search.png"} alt="Search" className={"object-contain !w-github !h-github !pt-8 md:!pt-4"} width={64} height={64} />
             </a>
           </Link>
           <button className="w-github h-github bg-transparent border-none" onClick={() => handleCopyLink()}>
-            <Image src={"/static/images/share.png"} className={"object-contain !w-github !h-github !pt-8 md:!pt-4"} width={64} height={64} />
+            <Image src={"/static/images/share.png"} alt="Share" className={"object-contain !w-github !h-github !pt-8 md:!pt-4"} width={64} height={64} />
           </button>
         </section>
       </section>
