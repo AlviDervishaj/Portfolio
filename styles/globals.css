@@ -1,16 +1,48 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react {
+  color: #0077b6;
+}
+.javascript {
+  color: #ffb703;
+}
+.css {
+  color: #219ebc;
+}
+.html {
+  color: #fb8500;
+}
+.next {
+  color: #212529;
+}
+.tailwind {
+  color: #023e8a;
+}
+.typescript {
+  color: #3a86ff;
+}
+:root {
+  --body-background-dark: #0E141B;
+  --body-background-light: #1E2831; 
+  --scrollbar-thumb-dark: #1d3557; 
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #e9ecef;
+}
+::-webkit-scrollbar-track{
+    border-radius: 9999px;
+    background-color: #caf0f8;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--scrollbar-thumb-dark);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+@font-face {
+    font-family: 'Wotfard';
+    src: url('/fonts/wotfard-regular-webfont.eot');
+    font-weight: normal;
+    font-style: normal;
 }
