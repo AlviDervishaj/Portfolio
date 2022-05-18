@@ -22,9 +22,9 @@ export const projects: Array<ProjectInterface> = [
     title: 'Todo-App',
     layout: 'Project',
     description: 'Todo App inspired by Iphone layout',
+    languages: ['React', 'JavaScript', 'CSS', "HTML"],
     source: 'https://todo-44b80.web.app/',
     repo: 'https://github.com/AlviDervishaj/Todo-App',
-    languages: ['React', 'JavaScript', 'CSS', "HTML"],
     lastCommit: "April 25th, 2022",
   },
   {
@@ -34,7 +34,7 @@ export const projects: Array<ProjectInterface> = [
     languages: ['NextJS', 'Tailwind', 'JavaScript', 'CSS'],
     repo: 'https://github.com/AlviDervishaj/youtube-clone',
     source: 'https://youtube-clone-wheat.vercel.app/',
-    lastCommit: 'April 25th, 2022',
+    lastCommit: 'May 18th, 2022',
   },
   {
     title: 'Social Card',

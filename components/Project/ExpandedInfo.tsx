@@ -8,7 +8,7 @@ import { useCallback, useEffect, useState } from "react";
 import { ExpandedInfoProps } from "./index";
 
 
-export const ExpandedInfo: NextPage<ExpandedInfoProps> = ({ title, description, layout, languages, source, repo, lastCommit }) => {
+export const ExpandedInfo: NextPage<ExpandedInfoProps> = ({ title, description, languages, source, repo, lastCommit }) => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
   const handleLoad = useCallback(() => {
@@ -62,6 +62,11 @@ export const ExpandedInfo: NextPage<ExpandedInfoProps> = ({ title, description, 
           {
             languages.map((language: any, index: number) => <p key={index} className={`text-lg ${language.toLowerCase()}`}>{language}</p>)
           }
+        </div>
+        <div className="flex flex-row w-full pt-4 space-x-4">
+          <p className="text-lg font-mono">
+            Last Commit : {lastCommit}
+          </p>
         </div>
         {/* Repo & Source */}
         <section className="flex flex-row md:justify-end justify-start items-center content-center gap-4 md:gap-6">
