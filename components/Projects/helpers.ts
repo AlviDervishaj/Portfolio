@@ -33,8 +33,8 @@ export const projects: Array<ProjectInterface> = [
     description: 'Youtube UI Clone made with NextJs and Tailwind',
     languages: ['NextJS', 'Tailwind', 'JavaScript', 'CSS'],
     repo: 'https://github.com/AlviDervishaj/youtube-clone',
+    source: 'https://youtube-clone-wheat.vercel.app/',
     lastCommit: 'April 25th, 2022',
-    source: 'http://youtube-clone-wheat.vercel.app/',
   },
   {
     title: 'Social Card',
