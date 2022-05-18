@@ -19,6 +19,10 @@ module.exports = {
       },
       fontFamily: {
         'wotfard': ['Wotfard']
+    },
+      animation:{
+        'spin-slow': 'spin 1.2s linear infinite'
+
     }
     },
   },
