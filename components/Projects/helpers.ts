@@ -34,7 +34,7 @@ export const projects: Array<ProjectInterface> = [
     languages: ['NextJS', 'Tailwind', 'JavaScript', 'CSS'],
     repo: 'https://github.com/AlviDervishaj/youtube-clone',
     source: 'https://youtube-clone-wheat.vercel.app/',
-    lastCommit: 'May 18th, 2022',
+    lastCommit: 'May 31th, 2022',
   },
   {
     title: 'Social Card',

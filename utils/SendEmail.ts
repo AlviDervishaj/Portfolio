@@ -29,6 +29,7 @@ export const sendEmail = async (
       info: "You're in! Keep an eye out for a welcome email! No confirmation is necessary.",
     };
   } catch (error: any) {
+    console.log({ error });
     return { error, code: 1, info: "Please try again later !" };
   }
 };

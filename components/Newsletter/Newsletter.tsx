@@ -36,7 +36,10 @@ export const Newsletter: NextPage = () => {
     const data: Email = response.data;
     setIsLoading(false);
     displayMessage(data.info);
-    data.error && displayMessage(data.error);
+    if (data.error) {
+      console.log({ error2: data.error });
+      return;
+    }
   };
 
   return (
@@ -92,9 +95,17 @@ export const Newsletter: NextPage = () => {
           </button>
         </div>
       </form>
-      {isLoading && <button className="w-full h-auto relative cursor-default" disabled>
-        <Image src={"/static/images/loading.png"} className="!object-contain !p-4 animate-spin-slow" alt="loading" width={64} height={64} />
-      </button>}
+      {isLoading && (
+        <button className="w-full h-auto relative cursor-default" disabled>
+          <Image
+            src={"/static/images/loading.png"}
+            className="!object-contain !p-4 animate-spin-slow"
+            alt="loading"
+            width={64}
+            height={64}
+          />
+        </button>
+      )}
       {message && (
         <div className="w-11/12 m-auto bg-green-600 md:rounded-full rounded-md p-2">
           <p className="text-slate-100 tracking-wide text-center text-xl md:text-2xl">
