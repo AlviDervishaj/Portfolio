@@ -33,7 +33,7 @@ export const projects: Array<ProjectInterface> = [
     description: 'Youtube UI Clone made with NextJs and Tailwind',
     languages: ['NextJS', 'Tailwind', 'JavaScript', 'CSS'],
     repo: 'https://github.com/AlviDervishaj/youtube-clone',
-    source: 'https://youtube-clone-wheat.vercel.app/',
+    source: 'https://youtube-clone-alvi.vercel.app/',
     lastCommit: 'May 31th, 2022',
   },
   {
@@ -42,7 +42,7 @@ export const projects: Array<ProjectInterface> = [
     description: 'Social Card Generator',
     languages: ['React', 'JavaScript', 'CSS', 'HTML'],
     repo: 'https://github.com/AlviDervishaj/Social-Card',
-    source: 'https://social-card-silk.vercel.app/',
+    source: 'https://social-card-alvi.vercel.app/',
     lastCommit: 'April 25th, 2022',
   }
 ]
