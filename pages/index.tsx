@@ -18,14 +18,15 @@ const Home: NextPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://portfolio-alvi.vercel.app/" />
         <meta property="og:title" content="Alvi Dervishaj Portfolio" />
-        <meta property="og:description" content="Nothing more to say. Visit my page for more information :)" />
+        <meta property="og:description" content="Hello ! I am Alvi Dervishaj, a frontend developer and this is my portfolio." />
         <meta property="og:image" content="https://portfolio-alvi.vercel.app/static/images/high.svg" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://portfolio-alvi.vercel.app/" />
+        <meta property="twitter:creator" content="@alvi_d1" />
         <meta property="twitter:title" content="Alvi Dervishaj Portfolio" />
-        <meta property="twitter:description" content="Nothing more to say. Visit my page for more information :)" />
-        <meta property="twitter:image" content={"https://portfolio-alvi.vercel.app/static/images/high.svg"} />
+        <meta property="twitter:description" content="Hello ! I am Alvi Dervishaj, a frontend developer and this is my portfolio." />
+        <meta property="twitter:image" content="https://portfolio-alvi.vercel.app/static/images/high.svg" />
       </Head>
       <Header />
       <About />
