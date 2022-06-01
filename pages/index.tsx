@@ -11,14 +11,21 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Alvi&apos;s Portfolio</title>
-        <meta name="title" content="Alvi Dervishaj Developer Portfolio" />
+        <title>Alvi Dervishaj Portfolio</title>
+        <meta name="title" content="Alvi Dervishaj Portfolio" />
         <meta name="description" content="Nothing more to say. Visit my page for more information :)" />
-        <meta name="og:title" content="Alvi Dervishaj Portfolio" />
-        <meta name="og:image" content="static/images/tv-app.png" />
-        <meta name="og:image:alt" content="Banner for portfolio-alvi.vercel.app " />
-        <meta name="og:description" content="Alvi's Developer Portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="og:type" content="website" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://portfolio-alvi.vercel.app/" />
+        <meta property="og:title" content="Alvi Dervishaj Portfolio" />
+        <meta property="og:description" content="Nothing more to say. Visit my page for more information :)" />
+        <meta property="og:image" content="/high.svg" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://portfolio-alvi.vercel.app/" />
+        <meta property="twitter:title" content="Alvi Dervishaj Portfolio" />
+        <meta property="twitter:description" content="Nothing more to say. Visit my page for more information :)" />
+        <meta property="twitter:image" content="/high.svg" />
       </Head>
       <Header />
       <About />
