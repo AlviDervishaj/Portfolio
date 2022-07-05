@@ -1,5 +1,5 @@
 // Next
-import { NextPage } from "next";
+import { NextComponentType } from "next";
 
 // React
 import { useRef, useContext, useState, useCallback, useEffect } from "react";
@@ -9,7 +9,7 @@ import { ScrollContext } from "../ScrollObserver";
 import { CaretDown, Logo } from "../Icons";
 
 
-export const Header: NextPage = () => {
+export const Header: NextComponentType = () => {
   const refContainer = useRef<HTMLDivElement>(null);
   const { scrollY }: { scrollY: number } = useContext(ScrollContext);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);

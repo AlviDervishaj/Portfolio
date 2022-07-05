@@ -1,8 +1,8 @@
 // Next & React
-import { NextPage } from "next";
+import { NextComponentType } from "next";
 import Link from "next/link";
 
-export const Footer: NextPage = () => {
+export const Footer: NextComponentType = () => {
   return (
     <footer className="w-full h-auto z-50 grid">
       <div className="w-full h-full p-4 grid grid-rows-2 gap-5 bg-gradient-to-r from-blue-500 to-sky-500">

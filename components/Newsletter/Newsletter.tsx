@@ -1,5 +1,5 @@
 // Next & React
-import { NextPage } from "next";
+import { NextComponentType } from "next";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -9,7 +9,7 @@ import { Email } from "../../utils/SendEmailHelpers";
 // Axios
 import axios, { AxiosResponse } from "axios";
 
-export const Newsletter: NextPage = () => {
+export const Newsletter: NextComponentType = () => {
   const [username, setUsername] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");

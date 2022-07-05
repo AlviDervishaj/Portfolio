@@ -1,6 +1,5 @@
 // Next & React
-import { NextPage } from "next";
-import { useState } from "react";
+import { useState, FC } from "react";
 
 // Helper 
 import { ProjectProps } from "./ProjectHelpers";
@@ -11,7 +10,7 @@ import { CaretDown } from "../Icons";
 // Components
 import { ExpandedInfo } from "./index";
 
-export const Project: NextPage<ProjectProps> = ({ project }) => {
+export const Project: FC<ProjectProps> = ({ project }) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
 
   return (

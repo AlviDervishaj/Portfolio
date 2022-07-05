@@ -1,14 +1,13 @@
 // Next & React
-import { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, FC } from "react";
 
 // Helpers
 import { ExpandedInfoProps } from "./index";
 
 
-export const ExpandedInfo: NextPage<ExpandedInfoProps> = ({ title, description, languages, source, repo, lastCommit }) => {
+export const ExpandedInfo: FC<ExpandedInfoProps> = ({ title, description, languages, source, repo, lastCommit }) => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
   const handleLoad = useCallback(() => {
