@@ -5,7 +5,6 @@ import { NextPage } from "next";
 import { Projects } from "../Projects";
 import { Footer } from "../Footer";
 import { Newsletter } from "../Newsletter";
-import { Resume } from "../Resume";
 
 export const About: NextPage = () => {
   return (
@@ -24,7 +23,6 @@ export const About: NextPage = () => {
       </div>
       <Projects />
       <Newsletter />
-      <Resume />
       <Footer />
     </section>
   );
