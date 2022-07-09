@@ -10,7 +10,6 @@ import { ScrollObserver } from "../components/ScrollObserver";
 
 
 function MyApp({ Component, pageProps }: AppProps) {
-
   return (
     <>
       <Script src={"https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"} strategy={"beforeInteractive"} />

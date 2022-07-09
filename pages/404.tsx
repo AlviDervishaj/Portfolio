@@ -1,20 +1,19 @@
 // Next & React
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import Script from "next/script";
 
-// Vanta
-import DOTS from "vanta/dist/vanta.dots.min";
-
-export default function notFoundHandler<NextPage>() {
-  const [vantaEffect, setVantaEffect] = useState<any>(null);
+export default function NotFound<NextPage>() {
   const vantaRef = useRef<HTMLDivElement>(null);
 
-  // Load vanta
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(DOTS({
+  return (<>
+    <Head>
+      <title>Oops !</title>
+    </Head>
+    <Script src={"https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"} onLoad={() => {
+      window["VANTA"].DOTS({
         el: vantaRef.current,
         mouseControls: true,
         touchControls: true,
@@ -28,17 +27,9 @@ export default function notFoundHandler<NextPage>() {
         backgroundColor: 0x11142d,
         size: 3.90,
         spacing: 47.00,
-      }));
+      });
     }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    }
-  }, [vantaEffect])
-
-  return (<>
-    <Head>
-      <title>Oops ! </title>
-    </Head>
+    } />
 
     <section className="w-screen h-screen grid place-items-center">
       <div className="w-screen h-screen absolute -z-10" ref={vantaRef} />
@@ -54,8 +45,6 @@ export default function notFoundHandler<NextPage>() {
             Go Back Home
           </a>
         </Link>
-
-
       </div>
     </section>
   </>)

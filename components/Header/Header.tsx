@@ -10,9 +10,6 @@ import { useRef, useContext, useState, useCallback, useEffect } from "react";
 import { ScrollContext } from "../ScrollObserver";
 import { CaretDown } from "../Icons";
 
-// Vanta
-import DOTS from "vanta/dist/vanta.dots.min";
-
 
 export const Header: NextComponentType = () => {
   const refContainer = useRef<HTMLDivElement>(null);
@@ -35,10 +32,9 @@ export const Header: NextComponentType = () => {
     loadImage();
   }, [loadImage])
 
-  // Load vanta
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(DOTS({
+  return (<>
+    <Script src={"https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"} onLoad={() => {
+      window["VANTA"].DOTS({
         el: vantaRef.current,
         mouseControls: true,
         touchControls: true,
@@ -52,14 +48,9 @@ export const Header: NextComponentType = () => {
         backgroundColor: 0x11142d,
         size: 3.90,
         spacing: 47.00,
-      }));
+      });
     }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    }
-  }, [vantaEffect])
-
-  return (
+    } />
     <div
       ref={refContainer}
       className="min-h-screen flex flex-col items-center justify-center sticky top-0"
@@ -99,5 +90,6 @@ export const Header: NextComponentType = () => {
         <CaretDown className="w-10 h-10" />
       </div>
     </div >
+  </>
   );
 };
