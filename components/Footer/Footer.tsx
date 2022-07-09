@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Components
-import { Credits } from "../Credits/Credits";
+import { Credits } from "../Credits";
 
 export const Footer: NextComponentType = () => {
   const handleResumePreview = (e: TouchEvent | MouseEvent) => {
