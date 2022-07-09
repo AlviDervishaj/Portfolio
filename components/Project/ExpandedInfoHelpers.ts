@@ -6,4 +6,5 @@ export interface ExpandedInfoProps {
   repo: string,
   source: string,
   lastCommit: string,
+  isOpened: boolean,
 }

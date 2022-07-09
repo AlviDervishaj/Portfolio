@@ -1,18 +1,14 @@
 // Next & React
 import Link from "next/link";
 import Image from "next/image";
-import { useCallback, useEffect, useState, FC } from "react";
+import { useCallback, useState, FC } from "react";
 
 // Helpers
 import { ExpandedInfoProps } from "./index";
 
 
-export const ExpandedInfo: FC<ExpandedInfoProps> = ({ title, description, languages, source, repo, lastCommit }) => {
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+export const ExpandedInfo: FC<ExpandedInfoProps> = ({ title, isOpened, description, languages, source, repo, lastCommit }) => {
   const [message, setMessage] = useState<string>("");
-  const handleLoad = useCallback(() => {
-    setIsLoaded(true);
-  }, [])
 
   const handleCopyLink = () => {
     if (!navigator) return displayMessage("Could not find navigator API 😢 !")
@@ -47,15 +43,15 @@ export const ExpandedInfo: FC<ExpandedInfoProps> = ({ title, description, langua
     }, 2500);
   }, [])
 
-  useEffect(() => {
-    handleLoad();
-  }, [handleLoad])
-
   return (
-    <div className={`w-full max-h-fit transition-all ease-in-out duration-1000 relative ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`w-full transition-all ease-in-out duration-250 relative ${isOpened ? 'opacity-100 max-h-fit z-10' : 'opacity-0 h-0 -z-50'}`}>
       <section className="md:px-8 w-full">
         {/* Website Demo */}
-        <iframe className="z-50 rounded-md object-cover w-full" width={600} height={500} sandbox={"allow-scripts allow-same-origin"} src={source} title={title} loading={"lazy"}>??</iframe>
+        <Link href={source} passHref>
+          <a>
+            <iframe className="z-50 rounded-md object-cover w-full" width={600} height={500} sandbox={"allow-scripts allow-same-origin"} src={source} title={title} loading={"eager"} />
+          </a>
+        </Link>
         <p className="pt-5 text-lg lg:text-xl">{description}</p>
         <div className={"flex flex-row max-w-sm pt-4 space-x-4"}>
           {
